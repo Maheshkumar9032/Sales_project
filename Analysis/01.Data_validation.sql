@@ -93,6 +93,7 @@ group BY
     order_id 
 having count(*)>1
 
+----------------------------------------------------------------------------------------
 --- 05 Basic Metrics
 
 select
@@ -110,4 +111,3 @@ from order_items
 select
     count(*) as total_products
 from products
-    
