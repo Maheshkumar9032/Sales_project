@@ -56,25 +56,7 @@ To ensure accuracy and reliability of insights.
 
 ## 📊 Business Performance
 
-### 1. Extreme Volatility in Early Phase (2016–Early 2017)
-
-Orders jumped from 4 (Sep 2016) to 324 (Oct 2016)
-
-👉 8000% growth, followed by a sharp drop
-
-👉 **Insight**:
-
-Early data is highly unstable and not reliable for trend analysis
-Likely due to low initial base or partial data collection
-
-👉 **Recommendation:**
-
-Exclude early months (2016) when making business decisions
-Focus analysis on stable periods (2017 onwards)
-
-
-
-### 2. Strong Growth Phase in 2017
+### 1. Strong Growth Phase in 2017
 
 Orders increased from 800 (Jan 2017) to 7544 (Nov 2017)
 Peak growth: 62.9% in Nov 2017
@@ -96,7 +78,7 @@ High demand periods are clearly visible
 Replicate strategies used in Nov 2017 (campaigns, offers, ads)
 Prepare inventory/logistics for Q4 demand
 
-### 3. Seasonal Pattern (Q4 Peak)
+### 2. Seasonal Pattern (Q4 Peak)
 
 Significant spike in November (7544 orders)
 Drop in December (-24.8%)
@@ -114,29 +96,6 @@ Use December for:
 Clearance sales
 Retention campaigns
 
-### 4. Stabilization in 2018 (Mature Phase)
-Orders fluctuate between ~6000–7200 per month
-Growth rates mostly between -10% to +7%
-
-👉 **Insight:**
-
-Business has entered a stable/mature phase
-No explosive growth like 2017
-
-👉 **Business Impact:**
-
-Growth is slowing
-Market may be saturated OR growth strategies plateaued
-
-👉 **Recommendation:**
-
-Focus on:
-
-- Customer retention (important based on your 3.12% repeat rate)
-
-- Increasing average order value (AOV)
-
-- Expanding into new regions
 
 
 ## 👥 Customer Behavior
