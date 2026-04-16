@@ -8,22 +8,32 @@ This project analyzes an e-commerce dataset to uncover key business insights rel
 
 ## Key Findings:
 
-- Revenue experienced rapid growth in 2017, peaked in **November (~1M)** due to seasonal demand, followed by a post-season dip in December, and stabilized at consistently high levels **(850K–1M)** in 2018, indicating a transition from expansion to business maturity.
+- The business experienced rapid growth in 2017, peaking in November (~7.5K orders), followed by stabilization in 2018, indicating a shift from expansion to maturity.
 
-- The top **10%** of orders contribute **41.1%** of total revenue, indicating a strong Pareto effect and heavy reliance on high-value transactions.
+- The top 10% of orders contribute 41.1% of total revenue, highlighting a strong Pareto effect and reliance on high-value transactions.
 
-- Only **3.12%** of customers are **repeat customers**, indicating extremely low customer retention and a heavy reliance on one-time purchases.
+- Only 3.12% of customers are repeat buyers, with an average purchase gap of 79 days, indicating extremely low retention and engagement.
 
-- The combination of **low repeat rate (3.12%)** and **low basket size (1.14 items/order)** indicates that revenue growth is heavily dependent on continuous customer acquisition rather than customer lifetime value
+- The combination of low repeat rate (3.12%) and low basket size (1.14 items/order) shows that revenue growth is heavily dependent on new customer acquisition rather than customer lifetime value.
+
+- Revenue is concentrated in a few product categories (Beauty, Watches, Home), while several mid-tier categories present growth opportunities.
+
+- Certain cities generate high order volume but low revenue, indicating low average order value (AOV) and strong potential for upselling and bundling strategies.
 
 
 ## Business Recommendations:
 
-- Focus on improving customer retention through loyalty programs
+- Improve customer retention by introducing loyalty programs, personalized offers, and remarketing campaigns, as only 3.12% of customers are repeat buyers.
 
-- Increase marketing efforts during high-performing months
+- Increase average order value (AOV) through product bundling, “frequently bought together” suggestions, and free delivery thresholds, given the low basket size (1.14 items/order).
 
-- Target high-performing regions for expansion
+- Leverage seasonal demand (especially Q4/November peaks) by increasing marketing spend, inventory, and operational capacity during high-performing periods.
+
+- Focus on high-value customer segments and top 10% orders, which contribute over 40% of total revenue, through premium targeting and personalized experiences.
+
+- Optimize low-performing but high-potential categories and regions by improving visibility, pricing strategies, and targeted promotions.
+
+- Enhance performance in high-volume but low-revenue cities by promoting higher-value products and upselling strategies to improve customer spending.
 
 
 ## Project Objective
@@ -44,9 +54,9 @@ To ensure accuracy and reliability of insights.
 
 ## Key Analysis & Insights
 
-### 📊 Business Performance
+## 📊 Business Performance
 
-#### 1. Extreme Volatility in Early Phase (2016–Early 2017)
+### 1. Extreme Volatility in Early Phase (2016–Early 2017)
 
 Orders jumped from 4 (Sep 2016) to 324 (Oct 2016)
 
@@ -62,7 +72,9 @@ Likely due to low initial base or partial data collection
 Exclude early months (2016) when making business decisions
 Focus analysis on stable periods (2017 onwards)
 
-#### 2. Strong Growth Phase in 2017
+
+
+### 2. Strong Growth Phase in 2017
 
 Orders increased from 800 (Jan 2017) to 7544 (Nov 2017)
 Peak growth: 62.9% in Nov 2017
@@ -84,7 +96,7 @@ High demand periods are clearly visible
 Replicate strategies used in Nov 2017 (campaigns, offers, ads)
 Prepare inventory/logistics for Q4 demand
 
-#### 3. Seasonal Pattern (Q4 Peak)
+### 3. Seasonal Pattern (Q4 Peak)
 
 Significant spike in November (7544 orders)
 Drop in December (-24.8%)
@@ -102,7 +114,7 @@ Use December for:
 Clearance sales
 Retention campaigns
 
-#### 4. Stabilization in 2018 (Mature Phase)
+### 4. Stabilization in 2018 (Mature Phase)
 Orders fluctuate between ~6000–7200 per month
 Growth rates mostly between -10% to +7%
 
@@ -127,9 +139,9 @@ Focus on:
 - Expanding into new regions
 
 
-### 👥 Customer Behavior
+## 👥 Customer Behavior
 
-#### 1. Repeat Customer Rate
+### 1. Repeat Customer Rate
 
 Only **3.12%** of customers are repeat buyers, indicating extremely low customer retention.
 
@@ -145,7 +157,7 @@ Introduce loyalty programs or discounts for repeat purchases
 Use email/WhatsApp remarketing campaigns
 Improve post-purchase engagement
 
-#### 2. Purchase Frequency
+### 2. Purchase Frequency
 
 The average time between purchases is 79.15 days, suggesting low customer engagement.
 
@@ -159,7 +171,7 @@ There is a long gap in the buying cycle
 Trigger reminders or offers within 30–45 days
 Introduce limited-time deals to shorten the purchase cycle
 
-#### 3. Customer Segmentation (Based on Purchase Gap)
+### 3. Customer Segmentation (Based on Purchase Gap)
 
 Frequent customers: 1052
 
@@ -185,7 +197,7 @@ Target “at-risk” customers with personalized offers
 Create retention campaigns specifically for this segment
 
 
-#### 4. Geographic Insights (Repeat Customers)
+### 4. Geographic Insights (Repeat Customers)
 
 Top cities with highest repeat customers:
 
@@ -212,7 +224,7 @@ Replicate successful strategies in lower-performing cities
 
 ## 🛍 Product Performance Insights
 
-#### 1. Top Revenue-Generating Categories
+### 1. Top Revenue-Generating Categories
 
 **Top categories by revenue:**
 
@@ -244,7 +256,7 @@ Introduce premium variants to increase margins.
 
 Bundle products within these categories.
 
-#### 2. Mid-to-Low Performing Categories
+### 2. Mid-to-Low Performing Categories
 
 Furniture & Decor → 0.73M
 
@@ -277,7 +289,7 @@ Demand
 
 Poor discoverability
 
-#### 3. High Revenue but Low Sales Volume Products
+### 3. High Revenue but Low Sales Volume Products
 
 Certain products generate high revenue despite low sales volume, indicating they are high-ticket items.
 
