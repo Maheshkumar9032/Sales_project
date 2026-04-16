@@ -75,7 +75,7 @@ High demand periods are clearly visible
 
 👉 **Recommendation:**
 
-Replicate strategies used in Nov 2017 (campaigns, offers, ads)
+- Replicate strategies used in Nov 2017 (campaigns, offers, ads)
 Prepare inventory/logistics for Q4 demand
 
 ### 2. Seasonal Pattern (Q4 Peak)
@@ -91,10 +91,10 @@ December = post-peak correction
 
 👉 **Recommendation:**
 
-Maximize revenue in November with heavy marketing
+- Maximize revenue in November with heavy marketing
 Use December for:
-Clearance sales
-Retention campaigns
+  - Clearance sales
+  - Retention campaigns
 
 
 
@@ -112,13 +112,13 @@ Weak long-term sustainability
 
 👉 **Recommendation:**
 
-Introduce loyalty programs or discounts for repeat purchases
-Use email/WhatsApp remarketing campaigns
-Improve post-purchase engagement
+- Introduce loyalty programs or discounts for repeat purchases
+- Use email/WhatsApp remarketing campaigns
+- Improve post-purchase engagement
 
 ### 2. Purchase Frequency
 
-The average time between purchases is 79.15 days, suggesting low customer engagement.
+The average time between purchases is **79.15** days, suggesting low customer engagement.
 
 👉 **Business Insight:**
 
@@ -132,13 +132,13 @@ Introduce limited-time deals to shorten the purchase cycle
 
 ### 3. Customer Segmentation (Based on Purchase Gap)
 
-Frequent customers: 1052
+- Frequent customers: 1052
 
-At-risk customers: 940
+- At-risk customers: 940
 
-Occasional customers: 570
+- Occasional customers: 570
 
-Regular customers: 435
+- Regular customers: 435
 
 👉 **Key Insight:**
 
@@ -158,13 +158,13 @@ Create retention campaigns specifically for this segment
 
 ### 4. Geographic Insights (Repeat Customers)
 
-Top cities with highest repeat customers:
+** Top cities with highest repeat customers:** 
 
-São Paulo (502)
+- São Paulo (502)
 
-Rio de Janeiro (236)
+- Rio de Janeiro (236)
 
-Belo Horizonte (92)
+- Belo Horizonte (92)
 
 👉 **Key Insight:**
 
@@ -187,27 +187,27 @@ Replicate successful strategies in lower-performing cities
 
 **Top categories by revenue:**
 
-Beleza & Saude → 1.25M
+- Beleza & Saude → 1.25M
 
-Relogios & Presentes → 1.20M
+- Relogios & Presentes → 1.20M
 
-Cama, Mesa & Banho → 1.03M
+- Cama, Mesa & Banho → 1.03M
 
-Esporte & Lazer → 0.98M
+- Esporte & Lazer → 0.98M
 
-Informatica Acessorios → 0.91M
+- Informatica Acessorios → 0.91M
 
-👉 Key Insight:
+👉 **Key Insight:**
 
 Revenue is concentrated in a few core categories
 Beauty, lifestyle, and home-related products dominate sales
 
-👉 Business Impact:
+👉 **Business Impact:**
 
 These categories are the primary revenue drivers
 Any drop here will significantly impact total revenue
 
-👉 Recommendation:
+👉 **Recommendation:**
 
 Prioritize inventory and marketing for top categories.
 
@@ -217,53 +217,53 @@ Bundle products within these categories.
 
 ### 2. Mid-to-Low Performing Categories
 
-Furniture & Decor → 0.73M
+- Furniture & Decor → 0.73M
 
-Cool Stuff → 0.63M
+- Cool Stuff → 0.63M
 
-Household Utilities → 0.63M
+- Household Utilities → 0.63M
 
-Automotive → 0.59M
+- Automotive → 0.59M
 
-Garden Tools → 0.48M
+- Garden Tools → 0.48M
 
-👉 Key Insight:
+👉 **Key Insight:**
 
 These categories contribute less but still form a significant secondary revenue base
 
-👉 Business Impact:
+👉 **Business Impact:**
 
 Opportunity to grow these segments
 Possible underutilized categories
 
-👉 Recommendation:
+👉 **Recommendation:**
 
-Improve visibility through targeted promotions
+- Improve visibility through targeted promotions
 
-Analyze whether low performance is due to:
+- Analyze whether low performance is due to:
 
-Pricing
+  - Pricing
 
-Demand
+  - Demand
 
-Poor discoverability
+  - Poor discoverability
 
 ### 3. High Revenue but Low Sales Volume Products
 
 Certain products generate high revenue despite low sales volume, indicating they are high-ticket items.
 
-👉 Business Insight:
+👉 **Business Insight:**
 
 These products contribute significantly to revenue per order
 
-👉 Recommendation:
+👉 **Recommendation:**
 
-Promote these products through:
+- Promote these products through:
 Upselling
 
-Premium positioning
+- Premium positioning
 
-Ensure availability and strong product pages
+- Ensure availability and strong product pages
 
 
 ## 🌍 Geographic Insights (Revenue per Customer)
@@ -276,7 +276,7 @@ Ensure availability and strong product pages
 
 - Smaller states show higher spending efficiency, while larger states rely more on scale than value per customer.
 
-👉 Recommendation:
+👉 **Recommendation:**
 
 - Focus on premium and upselling strategies in high-value states (PB, AL, RO)
 
@@ -292,10 +292,11 @@ Ensure availability and strong product pages
 
 - In contrast, cities like São Paulo and Rio de Janeiro maintain both high volume and high revenue, indicating healthier customer spending behavior.
 
-👉 Key Insight:
+👉 **Key Insight:**
+
 Some cities are volume-driven but low-spending, suggesting customers purchase cheaper products or smaller baskets.
 
-💡 Business Recommendation
+💡 **Business Recommendation:**
 
 - Improve AOV in these cities through:
 
@@ -320,7 +321,7 @@ Some cities are volume-driven but low-spending, suggesting customers purchase ch
 
 - Weekend orders are lower and more evenly distributed, indicating weaker but stable demand
 
-👉 Recommendation:
+👉 **Recommendation:**
 
 - Focus marketing campaigns and offers during **11 AM – 4 PM** peak window
 
@@ -332,18 +333,18 @@ Some cities are volume-driven but low-spending, suggesting customers purchase ch
 
 The average number of items per order is **1.14**, indicating that most customers purchase only a single item per transaction
 
-👉 Key Insight:
+👉 **Key Insight:**
 
 - Very low basket size → limited cross-selling or bundling behavior
 
 - The combination of low repeat rate (3.12%) and low basket size (1.14 items/order) indicates that revenue growth is heavily dependent on continuous customer acquisition rather than customer lifetime value
 
-👉 Business Impact:
+👉 **Business Impact:**
 
 Lower average order value (AOV)
 Revenue growth depends more on number of orders, not order size
 
-👉 Recommendation:
+👉 **Recommendation:**
 
 - Introduce bundle offers (e.g., “Buy 2, get discount”)
 
