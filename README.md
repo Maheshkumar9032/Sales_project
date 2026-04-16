@@ -1,335 +1,417 @@
 # E-Commerce Sales SQL Analysis
 
-## Project Overview
+## Executive Summary
 
-In this project I used SQL to analysis e-commerce data to uncover business insights related to:
-
-- Revenue
-- Customer behavior
-- Product performance
-- Operational patterns
-
-The goal of this project is not just to compute metrics, but to analyze **business patterns and trends** that support decision-making.
+This project analyzes an e-commerce dataset to uncover key business insights related to revenue, customer behavior, and product performance.
 
 ---
 
-## Analytical Framework
+## Key Findings:
 
-The analysis is structured into four key business perspectives:
+- Revenue experienced rapid growth in 2017, peaked in **November (~1M)** due to seasonal demand, followed by a post-season dip in December, and stabilized at consistently high levels **(850K–1M)** in 2018, indicating a transition from expansion to business maturity.
 
-- **Business Performance Analysis**  
-  Understand overall company performance and revenue trends.
+- The top **10%** of orders contribute **41.1%** of total revenue, indicating a strong Pareto effect and heavy reliance on high-value transactions.
 
-- **Customer Behavior Analysis**  
-  Understand how customers interact with the platform.
+- Only **3.12%** of customers are **repeat customers**, indicating extremely low customer retention and a heavy reliance on one-time purchases.
 
-- **Product Performance Analysis**  
-  Identify high-performing products and categories.
+- The combination of **low repeat rate (3.12%)** and **low basket size (1.14 items/order)** indicates that revenue growth is heavily dependent on continuous customer acquisition rather than customer lifetime value
 
-- **Geographic Insights**  
-  Understand regional performance.
 
-- **Operational  Order Insights**
-  Understand order patterns.
+## Business Recommendations:
 
----
+- Focus on improving customer retention through loyalty programs
 
-## 📂 Project Structure
+- Increase marketing efforts during high-performing months
 
-### 01. Data Analysis
-- `01.Data_validation.sql` — Ensures data quality, checks for nulls, duplicates, and inconsistencies
+- Target high-performing regions for expansion
 
----
 
-### 02. Business Performance Analysis
-- `01.What_is_the_monthly_revenue.sql` — Analyzes monthly revenue trends
-- `02.What_is_the_monthly_order_growth_rate.sql` — Calculates month-over-month order growth
-- `03.Which_months_generated_the_highest_revenue.sql` — Identifies top revenue-generating months
-- `04.What_percentage_of_revenue_comes_from_top_10_percent_orders.sql` — Evaluates revenue concentration
+## Project Objective
 
----
+To use SQL for analyzing sales data and generating actionable business insights that can support decision-making.
 
-### 03. Customer Behavior Analysis
-- `01.What_percentage_of_customers_are_repeat.sql` — Measures repeat customer rate
-- `02.What_is_avg_time_between_purchases.sql` — Calculates average purchase interval
-- `03.What_is_the_customer_segment_based_on_orders.sql` — Segments customers based on behavior
-- `04.Which_cities_have_the_highest_number_of_customers.sql` — Finds top customer locations
-- `05.Who_are_the_top_10_customers_by_revenue.sql` — Identifies high-value customers
 
----
+## Dataset & Validation
 
-### 04. Product Performance Analysis
-- `01.Which_product_categories_generate_the_most_revenue.sql` — Category-level revenue insights
-- `02.Which_products_are_frequently_purchased_together.sql` — Market basket analysis
-- `03.Which_products_generate_high_revenue.sql` — Top-performing products
-- `04.Which_categories_have_the_highest_average_order_value.sql` — AOV by category
+Before analysis, the dataset was validated for:
 
----
+- Missing values
+- Duplicate records
+- Data consistency
 
-### 05. Geographic Insights
-- `01.Which_states_generate_the_highest_revenue.sql` — Revenue by state
-- `02.Which_cities_generate_the_most_orders.sql` — Order distribution by city
+To ensure accuracy and reliability of insights.
 
----
 
-### 06. Operational Order Insights
-- `01.What_are_the_peak_hours_or_days_for_orders.sql` — Identifies peak order times
-- `02.What_is_the_average_number_of_items_per_order.sql` — Calculates basket size
----
+## Key Analysis & Insights
 
-## 01.Data Validation
+### 📊 Business Performance
 
-Before performing analysis, the dataset was validated to ensure data quality and reliability.
+#### 1. Extreme Volatility in Early Phase (2016–Early 2017)
 
-### Key Validation Checks
+Orders jumped from 4 (Sep 2016) to 324 (Oct 2016)
 
-- Verifying record counts across tables  
-- Checking for missing values  
-- Ensuring correct relationships between tables  
-- Confirming data consistency for timestamps and revenue fields  
+👉 8000% growth, followed by a sharp drop
 
----
+👉 **Insight**:
 
-## 02.Business Performance Analysis
+Early data is highly unstable and not reliable for trend analysis
+Likely due to low initial base or partial data collection
 
-This section focuses on understanding the **overall health and performance of the business**.  
+👉 **Recommendation:**
 
----
+Exclude early months (2016) when making business decisions
+Focus analysis on stable periods (2017 onwards)
 
-### Question 1  
-### **What is the monthly revenue trend?**
+#### 2. Strong Growth Phase in 2017
 
-**Objective**
+Orders increased from 800 (Jan 2017) to 7544 (Nov 2017)
+Peak growth: 62.9% in Nov 2017
 
-- Identify how revenue changes over time  
+👉 **Insight:**
 
-**Why it matters**
+2017 shows rapid business expansion
+November spike suggests:
+Festive season impact OR
+Major promotions
 
-Understanding revenue trends helps identify:
+👉 **Business Impact:**
 
-- Business growth patterns  
-- Seasonal demand  
-- Periods of decline or strong performance  
+Business scaled aggressively during this period
+High demand periods are clearly visible
 
-**Key SQL Concepts Used**
+👉 **Recommendation:**
 
-- Aggregation (`SUM`)  
-- Date analysis (`EXTRACT`, `DATE_TRUNC`)  
-- Grouping by month  
+Replicate strategies used in Nov 2017 (campaigns, offers, ads)
+Prepare inventory/logistics for Q4 demand
 
----
+#### 3. Seasonal Pattern (Q4 Peak)
 
-### Question 2  
-### **What is the monthly order growth rate?**
+Significant spike in November (7544 orders)
+Drop in December (-24.8%)
 
-**Objective**
+👉 **Insight:**
 
-- Measure how quickly the number of orders is increasing or decreasing each month  
+Clear seasonality pattern
+November = peak demand
+December = post-peak correction
 
-**Why it matters**
+👉 **Recommendation:**
 
-Order growth rate indicates whether the business is **expanding or slowing down**.
+Maximize revenue in November with heavy marketing
+Use December for:
+Clearance sales
+Retention campaigns
 
-**Growth Rate Formula**
+#### 4. Stabilization in 2018 (Mature Phase)
+Orders fluctuate between ~6000–7200 per month
+Growth rates mostly between -10% to +7%
 
-```text
-Growth Rate = (Current Month Orders − Previous Month Orders) / Previous Month Orders
-```
-### Key SQL Concepts Used
+👉 **Insight:**
 
-- Window functions
-- LAG()
-- Time-based grouping
+Business has entered a stable/mature phase
+No explosive growth like 2017
 
----
-### Question 3
-### Which months generated the highest revenue?
+👉 **Business Impact:**
 
-**Objective**
+Growth is slowing
+Market may be saturated OR growth strategies plateaued
 
-- Identify the months with the strongest sales performance.
+👉 **Recommendation:**
 
-**Why it matters**
+Focus on:
 
-This helps detect seasonality trends, promotional impacts, or peak demand periods.
+- Customer retention (important based on your 3.12% repeat rate)
 
-For example:
+- Increasing average order value (AOV)
 
-- Holiday seasons
+- Expanding into new regions
 
-- Major sales campaigns
 
-- End-of-year shopping spikes
+### 👥 Customer Behavior
 
-### Key SQL Concepts Used
+#### 1. Repeat Customer Rate
 
-- Aggregation
+Only **3.12%** of customers are repeat buyers, indicating extremely low customer retention.
 
-- Sorting with ORDER BY
+👉 **Business Impact:**
 
-- Ranking revenue by month
+The business is heavily dependent on new customers
+High customer acquisition cost (CAC) risk
+Weak long-term sustainability
 
+👉 **Recommendation:**
 
----
+Introduce loyalty programs or discounts for repeat purchases
+Use email/WhatsApp remarketing campaigns
+Improve post-purchase engagement
 
-### Question 4
-### What percentage of revenue comes from the top 10% of orders?
+#### 2. Purchase Frequency
 
-**Objective**
+The average time between purchases is 79.15 days, suggesting low customer engagement.
 
-- Measure how concentrated revenue is among high-value orders.
+👉 **Business Insight:**
 
-**Why it matters**
+Customers are not returning frequently.
+There is a long gap in the buying cycle
 
-Many businesses observe that a small percentage of orders generate a large share of revenue.
+👉 **Recommendation:**
 
-This analysis helps determine whether the business follows a Pareto-like distribution.
+Trigger reminders or offers within 30–45 days
+Introduce limited-time deals to shorten the purchase cycle
 
-Example insight:
+#### 3. Customer Segmentation (Based on Purchase Gap)
 
-- Top 10% of orders → 40% of revenue
+Frequent customers: 1052
 
-### Key SQL Concepts Used
+At-risk customers: 940
 
-- Window functions
+Occasional customers: 570
 
-- NTILE()
+Regular customers: 435
 
-- Revenue aggregation
+👉 **Key Insight:**
 
----
+A large portion of customers fall into “at-risk” and “occasional” categories
+Indicates potential churn risk
 
-## 03.Customer Behavior Analysis
+👉 **Business Impact:**
 
-This section focuses on understanding **how customers interact with the business**, their purchasing patterns, and their overall value.
+Many customers are close to dropping off
+Opportunity to convert them into loyal customers
 
----
+👉 **Recommendation:**
 
-### Question 1  
-### **What percentage of customers are repeat customers?**
+Target “at-risk” customers with personalized offers
+Create retention campaigns specifically for this segment
 
-**Objective**
 
-- Identify how many customers make more than one purchase  
+#### 4. Geographic Insights (Repeat Customers)
 
-**Why it matters**
+Top cities with highest repeat customers:
 
-Repeat customers are a strong indicator of:
+São Paulo (502)
 
-- Customer satisfaction  
-- Brand loyalty  
-- Long-term business sustainability  
+Rio de Janeiro (236)
 
-A higher repeat rate means the business is retaining customers effectively.
+Belo Horizonte (92)
 
-**Key SQL Concepts Used**
+👉 **Key Insight:**
 
-- DISTINCT count  
-- Aggregation (`COUNT`)  
-- Subqueries / CTE  
+Repeat customers are concentrated in a few major cities
 
----
+👉 **Business Impact:**
 
-### Question 2  
-### **What is the average time between purchases for repeat customers?**
+Strong brand presence in metro areas
+Opportunity to expand retention strategies to other regions
 
-**Objective**
+👉 **Recommendation:**
 
-- Measure how frequently customers return to make another purchase  
+Focus marketing campaigns in high-performing cities.
+Replicate successful strategies in lower-performing cities
 
-**Why it matters**
 
-This helps understand:
+## 🛍 Product Performance Insights
 
-- Customer buying cycle  
-- Engagement frequency  
-- Opportunities for remarketing  
+#### 1. Top Revenue-Generating Categories
 
-Shorter time gaps indicate higher engagement.
+**Top categories by revenue:**
 
-**Key SQL Concepts Used**
+Beleza & Saude → 1.25M
 
-- Window functions  
-- `LAG()`  
-- Date difference calculations  
+Relogios & Presentes → 1.20M
 
----
+Cama, Mesa & Banho → 1.03M
 
-### Question 3  
-### **What is the customer segment based on order behavior?**
+Esporte & Lazer → 0.98M
 
-**Objective**
+Informatica Acessorios → 0.91M
 
-- Group customers based on their purchasing patterns  
+👉 Key Insight:
 
-**Why it matters**
+Revenue is concentrated in a few core categories
+Beauty, lifestyle, and home-related products dominate sales
 
-Customer segmentation helps in:
+👉 Business Impact:
 
-- Targeted marketing  
-- Personalized offers  
-- Identifying high-value vs low-value customers  
+These categories are the primary revenue drivers
+Any drop here will significantly impact total revenue
 
-Typical segments may include:
+👉 Recommendation:
 
-- High-value customers  
-- Frequent buyers  
-- One-time customers  
+Prioritize inventory and marketing for top categories.
 
-**Key SQL Concepts Used**
+Introduce premium variants to increase margins.
 
-- CASE statements  
-- Aggregation  
-- GROUP BY  
+Bundle products within these categories.
 
----
+#### 2. Mid-to-Low Performing Categories
 
-### Question 4  
-### **Which cities have the highest number of customers?**
+Furniture & Decor → 0.73M
 
-**Objective**
+Cool Stuff → 0.63M
 
-- Identify geographic areas with the highest customer concentration  
+Household Utilities → 0.63M
 
-**Why it matters**
+Automotive → 0.59M
 
-This helps in:
+Garden Tools → 0.48M
 
-- Regional marketing strategies  
-- Expansion planning  
-- Demand forecasting  
+👉 Key Insight:
 
-**Key SQL Concepts Used**
+These categories contribute less but still form a significant secondary revenue base
 
-- GROUP BY  
-- COUNT  
-- Sorting (`ORDER BY`)  
+👉 Business Impact:
 
----
+Opportunity to grow these segments
+Possible underutilized categories
 
-### Question 5  
-### **Who are the top 10 customers by revenue?**
+👉 Recommendation:
 
-**Objective**
+Improve visibility through targeted promotions
 
-- Identify customers who contribute the most revenue  
+Analyze whether low performance is due to:
 
-**Why it matters**
+Pricing
 
-Top customers are critical for:
+Demand
 
-- Revenue stability  
-- VIP targeting  
-- Retention strategies  
+Poor discoverability
 
-Often, a small percentage of customers contribute a large portion of revenue.
+#### 3. High Revenue but Low Sales Volume Products
 
-**Key SQL Concepts Used**
+Certain products generate high revenue despite low sales volume, indicating they are high-ticket items.
 
-- Aggregation (`SUM`)  
-- ORDER BY  
-- LIMIT / TOP  
-  
+👉 Business Insight:
 
-- Conditional aggregation
+These products contribute significantly to revenue per order
 
+👉 Recommendation:
+
+Promote these products through:
+Upselling
+
+Premium positioning
+
+Ensure availability and strong product pages
+
+
+## 🌍 Geographic Insights (Revenue per Customer)
+
+- PB (223), AL (201), RO (196) have the highest revenue per customer, indicating strong customer spending despite smaller customer bases.
+
+- SP generates the highest total revenue (5.2M) but has the lowest revenue per customer (~130) due to a large customer base.
+
+- High-revenue states like RJ, MG, RS have moderate per-customer value (~140–148), suggesting volume-driven growth.
+
+- Smaller states show higher spending efficiency, while larger states rely more on scale than value per customer.
+
+👉 Recommendation:
+
+- Focus on premium and upselling strategies in high-value states (PB, AL, RO)
+
+- Improve average order value (AOV) in high-volume states like SP through bundling and cross-selling
+
+.
+
+## 🌆 City-Level Insights (High Orders, Low Revenue)
+
+- Cities like Guarulhos (1329 orders, ₹144K) and São Bernardo do Campo (1060 orders, ₹104K) show high order volume but relatively low revenue, indicating low average order value (AOV).
+
+- Similar pattern seen in Osasco, Santo André, Carapicuíba, where frequent purchases do not translate into high revenue.
+
+- In contrast, cities like São Paulo and Rio de Janeiro maintain both high volume and high revenue, indicating healthier customer spending behavior.
+
+👉 Key Insight:
+Some cities are volume-driven but low-spending, suggesting customers purchase cheaper products or smaller baskets.
+
+💡 Business Recommendation
+
+- Improve AOV in these cities through:
+
+-Product bundling
+
+- Minimum order discounts
+
+- Upselling higher-value products
+
+- Analyze product mix in these cities (likely skewed toward low-priced items)
+
+
+### ⚙️ Order Pattern Insights (Day & Time)
+
+- Peak order activity occurs during mid-day to evening **(11 AM – 4 PM)**, with the highest orders on Monday and Tuesday afternoons **(~1100+ orders)**
+
+- Weekdays generate significantly higher order volume compared to weekends
+
+- Monday shows consistently high activity, indicating strong start-of-week demand
+
+- Orders drop significantly during early morning hours **(12 AM – 7 AM)** across all days
+
+- Weekend orders are lower and more evenly distributed, indicating weaker but stable demand
+
+👉 Recommendation:
+
+- Focus marketing campaigns and offers during **11 AM – 4 PM** peak window
+
+- Allocate more resources (inventory/logistics/support) on weekdays, especially Monday–Wednesday
+
+- Use early morning hours for maintenance or backend operations
+
+## 🧺 Basket Size Insight (Items per Order)
+
+The average number of items per order is **1.14**, indicating that most customers purchase only a single item per transaction
+
+👉 Key Insight:
+
+- Very low basket size → limited cross-selling or bundling behavior
+
+- The combination of low repeat rate (3.12%) and low basket size (1.14 items/order) indicates that revenue growth is heavily dependent on continuous customer acquisition rather than customer lifetime value
+
+👉 Business Impact:
+
+Lower average order value (AOV)
+Revenue growth depends more on number of orders, not order size
+
+👉 Recommendation:
+
+- Introduce bundle offers (e.g., “Buy 2, get discount”)
+
+- Add “frequently bought together” suggestions
+
+- Offer free delivery thresholds to encourage multiple items
+
+## SQL Techniques Used
+
+- Data extraction and transformation using joins, aggregations, and CTEs
+
+- Advanced analysis using window functions (LAG, NTILE) for growth rates and distribution insights
+
+- Time-series analysis to identify trends, seasonality, and business cycles
+
+- Customer segmentation using behavioral logic and CASE statements
+
+- Data validation and cleaning to ensure data accuracy and consistency
+
+## Business problem solving, including:
+- Identifying revenue concentration (Pareto analysis)
+
+- Analyzing customer retention and purchase behavior
+
+- Detecting regional performance variations
+
+- Evaluating operational patterns (peak hours, order 
+trends)
+
+## Project Structure 
+
+- 01. data_validation.sql 
+
+- 02. business_performance.sql 
+
+- 03. customer_analysis.sql 
+
+- 04. product_analysis.sql 
+
+- 05. geographic_analysis.sql 
+
+- 06. operations_analysis.sql
