@@ -16,6 +16,6 @@ SELECT
     round(
         count(case when order_count > 1 then 1 end) 
         / count(*)::numeric * 100, 
-    2) as repeat_cx_percentage
-FROM cx_orders;
+    2) || '%' as repeat_cx_percentage
+FROM cx_orders
 
