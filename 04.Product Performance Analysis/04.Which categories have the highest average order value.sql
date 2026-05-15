@@ -19,5 +19,5 @@ from cat_ord_value
 GROUP BY
     name 
 ORDER BY
-    avg_cat_ord_val DESC        
-
+    avg_cat_ord_val DESC
+limit 10           

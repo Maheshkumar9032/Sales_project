@@ -14,6 +14,7 @@ GROUP BY
     name
 ORDER BY
     revenue DESC,
-    sales_count ASC    
+    sales_count ASC
+limit 10        
 
 

@@ -17,3 +17,4 @@ HAVING count(DISTINCT customer_unique_id) > 100
 order BY
     avg_rev_per_cx desc,
     revenue desc
+limit 10    

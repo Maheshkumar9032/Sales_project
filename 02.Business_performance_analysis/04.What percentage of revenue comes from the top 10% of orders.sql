@@ -20,6 +20,6 @@ from
 
 select 
     round(sum(case when revenue_rank =1 then rev end)/ sum(rev)::numeric * 100,2)
-    as top_orders_revenue
+    ||'%' as top_orders_revenue
 from ranked_orders    
 

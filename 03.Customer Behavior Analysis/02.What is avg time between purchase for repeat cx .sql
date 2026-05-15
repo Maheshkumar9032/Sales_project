@@ -16,6 +16,6 @@ WHERE orders.order_status = 'delivered'
 SELECT
    round(
        avg(extract(epoch from (orders_p_time - order_time)) / 86400), 
-   2) as avg_time_btw_orders
+   2)||'Days' as avg_time_btw_orders
 from cx_orders
 where order_time is not null; 
